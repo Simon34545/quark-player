@@ -642,13 +642,14 @@ module.exports = (store, services, mainWindow, app, defaultUserAgent) => {
         },
         {
           label: 'Open Test Image',
-          // visible: process.env.QUARK_TEST === '1',
+          visible: process.env.QUARK_TEST === '1',
           accelerator: 'CmdorCtrl+Alt+Shift+T',
           acceleratorWorksWhenHidden: false,
           click() {
-            const testWindow = new BrowserWindow({width: 600, height: 818, useContentSize: true, title: "Catgirl Fridge"});
+            const yiffWindow = new BrowserWindow({width: 600, height: 818, useContentSize: true, title: "Catgirl Fridge"});
             electronLog.info('Opening test image')
-            testWindow.loadFile('./ui/test.html');
+            //yiffWindow.loadFile('./ui/imgs/juno-ass.png');
+            yiffWindow.loadFile('./ui/yiff.html');
           }
         },
         {
